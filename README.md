@@ -6,7 +6,7 @@ You must have already migrated your schema to the new GraphQL instance before th
 
 **THIS WILL CLOBBER DATA IN THE TARGET GRAPHQL INSTANCE**
 
-If you need to try this again if you get it wrong and forgien key constraints are giving you issues, you'll need to manually delete the data from your target graph first.
+If you need to try this again if you get it wrong and forgeign key constraints are giving you issues, you'll need to manually delete the data from your target graph first.
 
 If your database is complicated, or if you need this to be idempotent, feel free to reimplement main.js with manual calls to `transferTableData()`
 
