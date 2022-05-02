@@ -1,0 +1,10 @@
+{
+    "foo_table": [
+        "column_a",
+        "column_b"
+    ],
+    "bar_table": [
+        "column_a",
+        "column_b"
+    ]
+}
