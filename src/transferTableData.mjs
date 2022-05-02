@@ -40,7 +40,6 @@ async function queryOldGraph(tableName, columnNames, shouldPrint) {
     return objects;
 }
 
-// for preserving idempotency
 async function clearTableInNewGraph(tableName, shouldPrint) {
     const result = (await newClient.mutate({
         mutation: gql`

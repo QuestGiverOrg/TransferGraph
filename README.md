@@ -4,6 +4,14 @@ TransferGraph is small node.js project to transfer data from one GraphQL instanc
 
 You must have already migrated your schema to the new GraphQL instance before this will work.
 
+**THIS WILL CLOBBER DATA IN THE TARGET GRAPHQL INSTANCE**
+
+If you need to try this again if you get it wrong and forgien key constraints are giving you issues, you'll need to manually delete the data from your target graph first.
+
+If your database is complicated, or if you need this to be idempotent, feel free to reimplement main.js with manual calls to `transferTableData()`
+
+There's an improvement here for some databases that could probably address idempotency (by reverse clearing the data before transfering) but that hasn't been implmented yet.
+
 # Instructions
 
 1. back up your data by exporting a .json from every table in the hasura console
