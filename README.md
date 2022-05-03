@@ -10,7 +10,7 @@ If you need to try this again if you get it wrong and forgeign key constraints a
 
 If your database is complicated, or if you need this to be idempotent, feel free to reimplement main.js with manual calls to `transferTableData()`
 
-There's an improvement here for some databases that could probably address idempotency (by reverse clearing the data before transfering) but that hasn't been implmented yet.
+There's an improvement here for some databases that could probably address idempotency (by reverse clearing the data before transfering) but that hasn't been implemented yet.
 
 # Instructions
 
