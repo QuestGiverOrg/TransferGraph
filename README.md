@@ -6,11 +6,11 @@ You must have already migrated your schema to the new GraphQL instance before th
 
 **THIS WILL CLOBBER DATA IN THE TARGET GRAPHQL INSTANCE**
 
-If you need to try this again if you get it wrong and forgien key constraints are giving you issues, you'll need to manually delete the data from your target graph first.
+Before transfering in the data from the old GraphQL instance, it will **clear the data in the new instance**!
 
-If your database is complicated, or if you need this to be idempotent, feel free to reimplement main.js with manual calls to `transferTableData()`
+If your database is complicated, feel free to reimplement main.js with manual calls to `clearTable()` and `transferTableData()`
 
-There's an improvement here for some databases that could probably address idempotency (by reverse clearing the data before transfering) but that hasn't been implmented yet.
+If you want to do a dry run, there is a variable called dryRun you can set to `true`(if someone wants to submit a PR to turn this into a cli option, please do)
 
 # Instructions
 
